@@ -20,7 +20,8 @@
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:id="@+id/editText2"
@@ -33,7 +34,7 @@
         android:drawableStart="@drawable/user"
         android:drawablePadding="12dp"
         android:fontFamily="@font/montserrat"
-        android:hint="Enter your fullname"
+        android:hint="@string/enter_your_fullname"
         android:minHeight="48dp"
         android:padding="12dp"
         android:textSize="12sp"
@@ -64,7 +65,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         android:autofillHints=""
-        tools:ignore="TextFields,VisualLintTextFieldSize" />
+        tools:ignore="DuplicateIds,HardcodedText,TextFields,VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/editText2"
@@ -87,7 +88,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         android:autofillHints=""
-        tools:ignore="TextFields,VisualLintTextFieldSize" />
+        tools:ignore="DuplicateIds,HardcodedText,TextFields,VisualLintTextFieldSize" />
 
     <EditText
         android:id="@+id/editText2"
@@ -110,7 +111,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         android:autofillHints=""
-        tools:ignore="TextFields,VisualLintTextFieldSize" />
+        tools:ignore="DuplicateIds,HardcodedText,TextFields,VisualLintTextFieldSize" />
 
     <Button
         android:id="@+id/button2"
@@ -118,34 +119,42 @@
         android:layout_height="48dp"
         android:layout_marginStart="55dp"
         android:layout_marginEnd="55dp"
+        android:layout_marginBottom="112dp"
         android:backgroundTint="#16DD4F"
         android:fontFamily="@font/montserrat_bold"
         android:text="Create new account"
         android:textColor="@color/white"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck,VisualLintButtonSize"
-        tools:layout_editor_absoluteY="616dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
         android:fontFamily="@font/montserrat_bold"
-        android:text="Already have an account?"
+        android:text="@string/already_have_an_account"
         android:textSize="11sp"
-        tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="664dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="Sign in"
         android:textColor="@color/green"
-        android:textSize="11dp"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="664dp" />
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints,TextContrastCheck,TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
