@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -27,6 +29,7 @@
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/sign_in"
         android:textSize="14sp"
+        android:onClick="kesignin"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
