@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun kesignin(view: View) {
+    fun kesignin(view: View) {
         setContentView(R.layout.activity_main)
         //explicit intent
         Handler(Looper.getMainLooper()).postDelayed({
