@@ -1,7 +1,12 @@
-package com.example.new_app
+package com.example.new_app.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.view.View
+import com.example.new_app.R
 
 class register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

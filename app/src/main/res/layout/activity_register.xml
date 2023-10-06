@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login"
-    tools:context=".register">
+    tools:context=".ui.register">
 
     <TextView
         android:id="@+id/textView"
@@ -79,6 +79,7 @@
         android:drawableEnd="@drawable/eye"
         android:drawablePadding="12dp"
         android:fontFamily="@font/montserrat"
+        android:inputType="textPassword"
         android:hint="Enter your password"
         android:minHeight="48dp"
         android:padding="12dp"
@@ -102,6 +103,7 @@
         android:drawableEnd="@drawable/eye"
         android:drawablePadding="12dp"
         android:fontFamily="@font/montserrat"
+        android:inputType="textPassword"
         android:hint="Confirm password"
         android:minHeight="48dp"
         android:padding="12dp"

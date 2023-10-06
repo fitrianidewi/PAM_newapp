@@ -1,24 +1,21 @@
-package com.example.new_app
+package com.example.new_app.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.View
+import com.example.new_app.R
 
-class login : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
-    }
-
-    fun kesignup(view: View) {
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_splash)
         //explicit intent
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, register::class.java))
+            startActivity(Intent( this, MainActivity::class.java))
             finish()
-        }, 300)
+        },3000)
     }
 }
+
