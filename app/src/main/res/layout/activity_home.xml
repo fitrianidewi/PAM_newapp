@@ -46,11 +46,13 @@
         android:id="@+id/imageView4"
         android:layout_width="135dp"
         android:layout_height="125dp"
-        android:layout_marginStart="86dp"
-        android:layout_marginTop="49dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintStart_toEndOf="@+id/textView1"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/home_icon_foreground" />
+        app:srcCompat="@mipmap/new_icon_home_foreground" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

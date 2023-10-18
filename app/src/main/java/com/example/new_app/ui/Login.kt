@@ -22,4 +22,12 @@ class login : AppCompatActivity() {
             finish()
         }, 300)
     }
+    fun kehome(view: View) {
+        setContentView(R.layout.activity_main)
+        //explicit intent
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this, home::class.java))
+            finish()
+        }, 30)
+    }
 }
