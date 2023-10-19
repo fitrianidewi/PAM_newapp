@@ -24,7 +24,7 @@
         tools:ignore="HardcodedText" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/fullnametext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
@@ -46,7 +46,7 @@
         tools:ignore="TextFields,VisualLintTextFieldSize" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/emailtext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
@@ -68,7 +68,7 @@
         tools:ignore="DuplicateIds,HardcodedText,TextFields,VisualLintTextFieldSize" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/passtext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
@@ -92,7 +92,7 @@
         tools:ignore="DuplicateIds,HardcodedText,TextFields,VisualLintTextFieldSize" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/confirmpass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
@@ -116,7 +116,7 @@
         tools:ignore="DuplicateIds,HardcodedText,TextFields,VisualLintTextFieldSize" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="55dp"
@@ -147,6 +147,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/textsignin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
