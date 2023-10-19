@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "504642443054",
+    "project_id": "trekridge-d5ac8",
+    "storage_bucket": "trekridge-d5ac8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504642443054:android:d9b7a39dbfdf9199b24cbf",
+        "android_client_info": {
+          "package_name": "com.example.new_app.ui"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP_eAqzmXdbpxG9qVzQHcfFk1UjlIEgEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
