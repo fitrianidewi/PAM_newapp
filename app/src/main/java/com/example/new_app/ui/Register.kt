@@ -15,11 +15,19 @@ class register : AppCompatActivity() {
     }
 
     fun kesignin(view: View) {
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
         //explicit intent
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent( this, login::class.java))
             finish()
         },300 )
+    }
+    fun kehome(view: View) {
+        //setContentView(R.layout.activity_main)
+        //explicit intent
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this, home::class.java))
+            finish()
+        }, 30)
     }
 }

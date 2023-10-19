@@ -52,6 +52,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/new_icon_home_foreground" />
 
+    <ImageButton
+        android:id="@+id/buttontips"
+        android:layout_width="135dp"
+        android:layout_height="125dp"
+        android:padding="1dp"
+        android:layout_marginStart="46dp"
+        android:background="@drawable/roundcorner"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:src="@drawable/tips"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

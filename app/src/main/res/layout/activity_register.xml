@@ -125,6 +125,7 @@
         android:backgroundTint="#16DD4F"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/sign_up"
+        android:onClick="kehome"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"

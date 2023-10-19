@@ -15,7 +15,7 @@ class login : AppCompatActivity() {
     }
 
     fun kesignup(view: View) {
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
         //explicit intent
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, register::class.java))
@@ -23,7 +23,7 @@ class login : AppCompatActivity() {
         }, 300)
     }
     fun kehome(view: View) {
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
         //explicit intent
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, home::class.java))
