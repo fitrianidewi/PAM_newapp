@@ -53,16 +53,68 @@
         app:srcCompat="@mipmap/new_icon_home_foreground" />
 
     <ImageButton
-        android:id="@+id/buttontips"
-        android:layout_width="135dp"
-        android:layout_height="125dp"
-        android:padding="1dp"
-        android:layout_marginStart="46dp"
-        android:background="@drawable/roundcorner"
-        android:layout_marginTop="40dp"
+        android:id="@+id/imageButton2"
+        android:layout_width="125dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="35dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        android:src="@drawable/tips"/>
+        app:srcCompat="@mipmap/tipsntrik_round" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="412dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Tips and Tricks"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="125dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@mipmap/dodont_round" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="408dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Do's and Don'ts"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="125dp"
+        android:layout_height="119dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="152dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@mipmap/tools_round" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="580dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Tools"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
