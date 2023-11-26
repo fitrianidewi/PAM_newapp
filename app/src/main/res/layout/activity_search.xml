@@ -27,7 +27,7 @@
         android:layout_marginTop="4dp"
         android:background="@drawable/bg_search"
         android:iconifiedByDefault="false"
-        android:queryBackground="color/grey"
+        android:backgroundTint="@color/grey"
         android:queryHint="Search your destination"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />

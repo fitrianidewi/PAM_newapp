@@ -8,7 +8,7 @@ import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import android.widget.Toast
-import com.example.new_app.Listgunung
+import com.example.new_app.model.Listgunung
 import com.example.new_app.R
 import com.example.new_app.model.listgunung
 import org.json.JSONException

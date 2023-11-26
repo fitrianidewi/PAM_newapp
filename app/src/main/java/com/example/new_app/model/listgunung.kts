@@ -1,4 +1,4 @@
-package com.example.new_app
+package com.example.new_app.model
 
 
 import java.io.Serializable
