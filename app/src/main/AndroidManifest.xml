@@ -16,6 +16,9 @@
             android:name=".ui.listgunung"
             android:exported="false" />
         <activity
+            android:name=".ui.tools"
+            android:exported="false" />
+        <activity
             android:name=".ui.profile"
             android:exported="false" />
         <activity
