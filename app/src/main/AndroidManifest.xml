@@ -17,7 +17,7 @@
         android:theme="@style/Theme.New_app"
         tools:targetApi="31">
         <activity
-            android:name=".ui.search"
+            android:name=".ui.home"
             android:exported="false" />
         <activity
             android:name=".ui.tools"
@@ -41,7 +41,7 @@
             android:name=".ui.register"
             android:exported="false" />
         <activity
-            android:name=".ui.home"
+            android:name=".ui.search"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -9,4 +9,15 @@ data class NamaGunung(
     val lokasi: String,
     val lon: Double,
     val nama: String
-)
+) {
+    companion object {
+        val strImageGunung: Any = TODO()
+        val strLong: Unit
+        val strLat: Any
+        val strInfoGunung: CharSequence?
+        val strJalurPendakian: CharSequence?
+        val strDeskripsi: CharSequence?
+        val strNamaGunung: CharSequence?
+        val strLokasiGunung: CharSequence?
+    }
+}

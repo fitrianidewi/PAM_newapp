@@ -5,17 +5,18 @@ import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.new_app.ListGunungAdapter
+import com.example.new_app.Adapter.AdapterGunung
 import com.example.new_app.R
 import com.example.new_app.model.Gunung
+import java.util.Locale
 
-class SearchActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
+class search : AppCompatActivity(), SearchView.OnQueryTextListener {
 
     private lateinit var searchView: SearchView
     private lateinit var recyclerView: RecyclerView
     private val listGunung = ArrayList<Gunung>()
     private val listFilteredGunung = ArrayList<Gunung>()
-    private lateinit var adapterGunung: ListGunungAdapter
+    private lateinit var adapterGunung: AdapterGunung
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +40,7 @@ class SearchActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
         // Set up recyclerView
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapterGunung = ListGunungAdapter(listFilteredGunung)
+        adapterGunung = AdapterGunung(listFilteredGunung)
         recyclerView.adapter = adapterGunung
     }
 
@@ -63,7 +64,7 @@ class SearchActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
         // Filter gunung based on query
         for (gunung in listGunung) {
-            if (gunung.nama_gunung.toLowerCase().contains(query.toLowerCase())) {
+            if (gunung.nama_gunung.contains(query.lowercase(Locale.getDefault()))) {
                 listFilteredGunung.add(gunung)
             }
         }
