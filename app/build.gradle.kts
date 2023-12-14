@@ -50,6 +50,7 @@ dependencies {
     implementation("com.android.car.ui:car-ui-lib:2.5.1")
     implementation("com.android.volley:volley:1.2.1")
     implementation("androidx.games:games-activity:2.0.2")
+    implementation("com.google.firebase:protolite-well-known-types:18.0.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -75,16 +76,29 @@ dependencies {
     //lifecycle
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
 
     //dependecy injection
     implementation ("io.insert-koin:koin-android:3.1.2")
 
-    implementation("androidx.room:room-runtime:2.6.0")
-    implementation("androidx.room:room-ktx:2.6.0")
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
 
 
     implementation ("com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2")
     implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.23")
+
+    // coroutine
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+
+    //picasso
+    implementation ("com.squareup.picasso:picasso:2.8")
+
+    //barchart
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    //location
+    implementation ("com.google.android.gms:play-services-location:21.0.1")
+
 
 }

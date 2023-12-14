@@ -1,10 +1,9 @@
 package com.example.new_app.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.example.new_app.R
+import androidx.appcompat.app.AppCompatActivity
 import com.example.new_app.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -27,7 +26,7 @@ class HomeActivity : AppCompatActivity() {
     }
     private fun weather() {
         binding.ketips.setOnClickListener {
-            startActivity(Intent(this, weather::class.java))
+            startActivity(Intent(this, CurrentWeather::class.java))
             Log.d("WeatherActivity", "Button clicked. Starting Weather activity.")
         }
     }
