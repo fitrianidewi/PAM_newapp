@@ -100,5 +100,8 @@ dependencies {
     //location
     implementation ("com.google.android.gms:play-services-location:21.0.1")
 
+    implementation ("androidx.room:room-runtime:2.6.1")
+    annotationProcessor ("androidx.room:room-compiler:2.6.1")
+
 
 }

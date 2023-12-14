@@ -1,15 +1,17 @@
 package com.example.new_app.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
 import android.widget.Toast
-import com.example.new_app.R
+import androidx.appcompat.app.AppCompatActivity
 import com.example.new_app.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class login : AppCompatActivity() {
 
@@ -18,11 +20,9 @@ class login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        firebaseAuth = FirebaseAuth.getInstance()
         binding.textView.setOnClickListener {
             val intent = Intent(this, register::class.java)
             startActivity(intent)
@@ -33,20 +33,23 @@ class login : AppCompatActivity() {
             val pass = binding.passtext.text.toString()
 
             if (email.isNotEmpty() && pass.isNotEmpty()) {
+                // Check user credentials in Room Database
+                GlobalScope.launch(Dispatchers.IO) {
+                    val userDao = MyApp.database.userDao()
+                    val user = userDao.getUserByEmailAndPassword(email, pass)
 
-                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        val intent = Intent(this, HomeActivity::class.java)
-                        startActivity(intent)
+                    if (user != null) {
+                        // Credentials are correct
+                        moveToHomeActivity()
                     } else {
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        // Credentials are incorrect
+                        showToast("Email atau password salah")
                     }
                 }
             } else {
-                Toast.makeText(this, "Mohon isi dengan benar", Toast.LENGTH_SHORT).show()
+                showToast("Mohon isi dengan benar")
             }
         }
-
 
         binding.textView.setOnClickListener {
             val intent = Intent(this, register::class.java)
@@ -70,6 +73,23 @@ class login : AppCompatActivity() {
                 finish()
             }, 30)
         }
+
+
+
     }
-    
+
+    private fun moveToHomeActivity() {
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
+        }, 30)
+    }
+
+    private fun showToast(s: String) {
+        runOnUiThread {
+            Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+
 }

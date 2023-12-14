@@ -1,7 +1,6 @@
 package com.example.new_app.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -9,10 +8,13 @@ import android.os.Parcel
 import android.os.Parcelable
 import android.view.View
 import android.widget.Toast
-import com.example.new_app.R
+import androidx.appcompat.app.AppCompatActivity
 import com.example.new_app.databinding.ActivityRegisterBinding
+import com.example.new_app.db.UserEntity
 import com.google.firebase.auth.FirebaseAuth
-import kotlin.math.log
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class register() : AppCompatActivity(), Parcelable {
 
@@ -26,7 +28,6 @@ class register() : AppCompatActivity(), Parcelable {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -36,6 +37,7 @@ class register() : AppCompatActivity(), Parcelable {
             val intent = Intent(this, register::class.java)
             startActivity(intent)
         }
+
         binding.button.setOnClickListener {
             val fullname = binding.fullnametext.text.toString()
             val email = binding.emailtext.text.toString()
@@ -44,22 +46,21 @@ class register() : AppCompatActivity(), Parcelable {
 
             if (fullname.isNotEmpty() && email.isNotEmpty() && pass.isNotEmpty() && confirmpass.isNotEmpty()) {
                 if (pass == confirmpass) {
+                    // Simpan user ke database Room
+                    val userDao = MyApp.database.userDao()
 
-                    firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
-                        if (it.isSuccessful) {
-                            val intent = Intent(this, login::class.java)
-                            startActivity(intent)
-                        } else {
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
-
-                        }
+                    GlobalScope.launch(Dispatchers.IO) {
+                        val user = UserEntity(fullname = fullname, email = email, password = pass)
+                        userDao.insertUser(user)
                     }
+
+                    // Pindah ke activity selanjutnya
+                    moveToNextActivity()
                 } else {
                     Toast.makeText(this, "Password tidak sama", Toast.LENGTH_SHORT).show()
                 }
             } else {
                 Toast.makeText(this, "Mohon isi dengan benar", Toast.LENGTH_SHORT).show()
-
             }
         }
 
@@ -80,6 +81,11 @@ class register() : AppCompatActivity(), Parcelable {
                 finish()
             }, 30)
         }
+    }
+    private fun moveToNextActivity() {
+        val intent = Intent(this, login::class.java)
+        startActivity(intent)
+        finish() // Jika Anda ingin menutup activity saat ini
     }
 
     override fun describeContents(): Int {
