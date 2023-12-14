@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- res/values/arrays.xml -->
+
+        <string-array name="location_array">
+            <item>Yogyakarta</item>
+            <item>Jakarta</item>
+            <!-- Tambahkan wilayah lain sesuai kebutuhan -->
+        </string-array>
+
+
+</resources>

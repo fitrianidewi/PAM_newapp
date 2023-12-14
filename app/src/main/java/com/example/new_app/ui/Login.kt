@@ -7,6 +7,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import android.widget.Toast
+import com.example.new_app.R
 import com.example.new_app.databinding.ActivityLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 
@@ -35,7 +36,7 @@ class login : AppCompatActivity() {
 
                 firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        val intent = Intent(this, home::class.java)
+                        val intent = Intent(this, HomeActivity::class.java)
                         startActivity(intent)
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
@@ -61,13 +62,14 @@ class login : AppCompatActivity() {
             }, 300)
         }
 
-        //fun kehome(view: View) {
+        fun kehome(view: View) {
             //setContentView(R.layout.activity_main)
             //explicit intent
-           // Handler(Looper.getMainLooper()).postDelayed({
-               // startActivity(Intent(this, home::class.java))
-              //  finish()
-           // }, 30)
-        //}
+            Handler(Looper.getMainLooper()).postDelayed({
+                startActivity(Intent(this, HomeActivity::class.java))
+                finish()
+            }, 30)
+        }
     }
+    
 }

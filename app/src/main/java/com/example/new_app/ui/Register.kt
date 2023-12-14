@@ -19,6 +19,10 @@ class register() : AppCompatActivity(), Parcelable {
     private lateinit var binding: ActivityRegisterBinding
     private lateinit var firebaseAuth: FirebaseAuth
 
+    constructor(parcel: Parcel) : this() {
+
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,7 +76,7 @@ class register() : AppCompatActivity(), Parcelable {
             //setContentView(R.layout.activity_main)
             //explicit intent
             Handler(Looper.getMainLooper()).postDelayed({
-                startActivity(Intent(this, home::class.java))
+                startActivity(Intent(this, HomeActivity::class.java))
                 finish()
             }, 30)
         }
@@ -84,5 +88,24 @@ class register() : AppCompatActivity(), Parcelable {
 
     override fun writeToParcel(p0: Parcel, p1: Int) {
         TODO("Not yet implemented")
+    }
+
+    fun kesignin(view: View) {
+        //setContentView(R.layout.activity_main)
+        //explicit intent
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this, login::class.java))
+            finish()
+        }, 300)
+    }
+
+    companion object CREATOR : Parcelable.Creator<register> {
+        override fun createFromParcel(parcel: Parcel): register {
+            return register(parcel)
+        }
+
+        override fun newArray(size: Int): Array<register?> {
+            return arrayOfNulls(size)
+        }
     }
 }

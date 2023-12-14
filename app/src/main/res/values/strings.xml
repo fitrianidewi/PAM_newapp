@@ -14,4 +14,14 @@
     <string name="informasi_gunung">Informasi Gunung</string>
     <string name="where_do_you_want_to_go">Where do you want to go?</string>
     <string name="recommended_place">Recommended Place</string>
+    <string name="daftar_gunung">Daftar Gunung</string>
+    <string name="choose_your_categories">Choose your categories</string>
+    <string name="todo">TODO</string>
+    <string name="do_s_and_don_ts">Do\'s and Don\'ts</string>
+    <string name="to_do">TODO</string>
+    <string name="tools">tools</string>
+    <string name="get_weather">get weather</string>
+    <string name="select_location">select location</string>
+    <string name="temperature_placeholder">temperature placeholder</string>
+    <string name="description_placeholder">description placeholder</string>
 </resources>

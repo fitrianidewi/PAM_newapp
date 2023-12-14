@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tempMax" type="id" />
+    <item name="day" type="id" />
+    <item name="time" type="id" />
+    <item name="statusImage" type="id" />
+    <item name="tempMin" type="id" />
+</resources>
